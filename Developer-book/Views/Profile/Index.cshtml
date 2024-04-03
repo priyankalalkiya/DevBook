@@ -1,0 +1,79 @@
+﻿@model Developer_book.Models.ProfileModel
+
+@{
+    ViewData["Title"] = "Create Your Profile";
+}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DevBook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-lg-5" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Developer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="ContectUS" asp-action="Index">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Signin" asp-action="Index">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<h2 class="my-lg-4">Create Your Profile</h2>
+<p>Let's get some information to make your profile stand out.</p>
+<p><span>*</span> = required field</p>
+
+<form asp-action="CreateProfile" method="post">
+    <div class="form-group">
+        <label for="status">* Select Professional Status</label>
+        <input asp-for="status" class="form-control" placeholder="Enter Your Status">
+        <small class="form-text">Give us an idea of where you are at in your career.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="company">Company</label>
+        <input asp-for="company" class="form-control" placeholder="Could be your own company or one you work for">
+    </div>
+
+    <div class="form-group">
+        <label for="website">Website</label>
+        <input asp-for="website" class="form-control" placeholder="Could be your own or a company website">
+    </div>
+
+    <div class="form-group">
+        <label for="city">Location</label>
+        <input asp-for="city" class="form-control" placeholder="City & state suggested (eg. Boston, MA)">
+    </div>
+
+    <div class="form-group">
+        <label for="field">* Skills</label>
+        <input asp-for="field" class="form-control" placeholder="Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)" required>
+    </div>
+
+    <div class="form-group">
+        <label for="githubname">Github Username</label>
+        <input asp-for="githubname" class="form-control" placeholder="If you want your latest repos and a Github link, include your username">
+    </div>
+
+    <div class="form-group">
+        <label for="bio">A short bio of yourself</label>
+        <textarea asp-for="bio" class="form-control" placeholder="Tell us a little about yourself"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/dashboard" class="btn btn-secondary">Go Back</a>
+</form>

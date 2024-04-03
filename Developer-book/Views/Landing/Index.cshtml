@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Developer Book";
+}
+
+<style>
+    .landing {
+        height:700px;
+        background-image: url("/Image/showcase.jpg"); /* Adjust the path based on your wwwroot structure */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white; 
+    }
+</style>
+
+<section class="landing"  >
+    <div class="dark-overlay">
+        <div class="landing-inner">
+            <h1 class="x-large">Developer Book</h1>
+
+            <p class="lead">
+                Create developer profile/portfolio, share posts and interact with
+                other developers
+            </p>
+
+            <div class="buttons">
+                <a href="/signup" class="btn btn-primary">Sign Up</a>
+                <a href="/signin" class="btn">Login</a>
+            </div>
+        </div>
+    </div>
+</section>

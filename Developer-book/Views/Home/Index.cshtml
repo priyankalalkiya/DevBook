@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DevBook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Developer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="ContectUS" asp-action="Index">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Signin" asp-action="Index">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container">
+    <h1 class="large text-primary">Dashboard</h1>
+
+    <p class="lead">
+        <i class="fas fa-user"></i> Welcome 
+    </p>
+    <p>You have not yet set up a profile, please add some info</p>
+
+    <a href="/profile" class="btn btn-primary my-1">
+        Create Profile
+    </a>
+</section>
